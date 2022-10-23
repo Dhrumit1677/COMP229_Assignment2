@@ -1,0 +1,66 @@
+<!-- Name: Dhrumit Patel
+Student ID: 301171388
+COMP 229 - Web Application Development
+Topic: Assignment 2 - Express Authentication -->
+<%-include ../partials/header.ejs%>
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <h1><%title%></h1>
+      <form class="form" method="POST">
+        <div class="form group">
+          <label for="nameTextField">
+            Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <input
+              type="text"
+              class="form control"
+              id="nameTextField"
+              placeholder="Enter name"
+              name="name"
+              value="<%=contact.name%>"
+              required
+            />
+          </label>
+        </div>
+        <div class="form group">
+          <label for="numberTextField"
+            >Number
+            <input
+              type="text"
+              class="form control"
+              id="numberTextField"
+              placeholder="Enter phone number"
+              name="number"
+              value="<%=contact.number%>"
+              required
+            />
+          </label>
+        </div>
+        <div class="form group">
+          <label for="emailTextField"
+            >Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input
+              type="email"
+              class="form control"
+              id="emailTextField"
+              placeholder="Enter email address"
+              name="email"
+              value="<%=contact.email%>"
+              required
+            />
+          </label>
+        </div>
+
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fas-edit"></i>Submit
+        </button>
+        <a href="/busContact" class="btn btn-warning"
+          ><i class="fas fas-undo"></i>Cancel</a
+        >
+        <a href="/busContact/delete/<%=contact._id%>" class="btn btn-danger"
+          >Delete</a
+        >
+      </form>
+    </div>
+  </div>
+</div>
